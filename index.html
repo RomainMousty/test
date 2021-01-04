@@ -1,9 +1,32 @@
 <!DOCTYPE html>
-<html>
-	<body>
-		<h1>Hello World</h1>
-		<h1>Hello World</h1>
-		<h1>Hello World</h1>
-		<p>I'm hosted with GitHub Pages.</p>
-	</body>
+ <meta charset="utf-8">
+  <head>
+  	Annuaire Téléphonique V.2<br>
+  </head>
+  <body>
+
+  	<?php
+            $servername = 'localhost';
+            $username = 'root';
+            $password = '';
+            
+            //On établit la connexion
+            $db = new mysqli($servername, $username, $password);
+            
+            //On vérifie la connexion
+            if($db->connect_error){
+                die('Erreur : ' .$db->connect_error);
+            }
+            echo 'Connexion réussie';<br>
+        ?>
+
+  	NOM <input type="text" name="ch_nom" value="ex : NOM "><br>
+  	PRENOM <input type="text" name="prenom" value="ex : PRENOM "><br>
+  	NUMERO <input type="text" name="numero" value="ex : 06******* "><br>
+  	<input type="button" value="Ajouter">
+	<input type="button" value="Modifier">
+  	<input type="button" value="Supprimer">
+  	<input type="button" value="Rechercher">
+
+  </body>
 </html>
